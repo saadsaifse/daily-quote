@@ -1,24 +1,40 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Quote from './Quote.js';
 
 class App extends Component {
+
+  constructor(props){
+    super(props);
+
+    this.state = {
+      color: '#000'
+    };
+  }
+
+  componentWillUpdate(nextProps, nextState){
+    if (this.state.color !== nextState.color){
+      console.log('color changed');
+    }
+  }
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <Quote color={this.state.color}/>
+          <div>
+            <label style = {{color: '#61dafb'}}>by </label>
+            <a
+              className="App-link"
+              href="https://saadsaifse.wordpress.come"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              saadsaifse
+            </a>
+          </div>
         </header>
       </div>
     );
