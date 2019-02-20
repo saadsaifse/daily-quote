@@ -23,7 +23,6 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <Quote color={this.state.color}/>
           <div>
             <label style = {{color: '#61dafb'}}>by </label>
             <a

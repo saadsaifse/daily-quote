@@ -1,6 +1,6 @@
 #wrapper {
     text-align: center;
-    background-color: #282c34;
+    /*background-color: #282c34;*/
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -8,10 +8,12 @@
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
+    transition:  background-color 500ms linear;
   }
   
   .app-link {
-    color: #61dafb;
+    color: #FFFFFF;
+    font-size: 20px;
   }
 
 #quote-box{
@@ -29,7 +31,7 @@
     clear: both;
     font-weight: 500;
     font-size: 1.75em;
-    color: black;
+    transition:  color 500ms linear;
 }
 
 #author{
@@ -39,7 +41,7 @@
     padding-top: 20px;
     font-size: 1em;
     text-align: right;
-    color:black;
+    transition:  color 500ms linear;
 }
 
 #options {
@@ -57,6 +59,7 @@
     margin-top: 30px;
     opacity: 1;
     cursor: pointer;
+    transition:  background-color 500ms linear;
 }
 
 #new-quote{
